@@ -27,3 +27,7 @@
   .card {
     background: blue;
   }
+
+  .card:active { 
+    background: aqua!important; 
+  }
