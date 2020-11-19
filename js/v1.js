@@ -3,15 +3,12 @@ for (let index = 1; index < 17; index++) {
     div.className = 'card';
 
     div.innerHTML = index;
-
+    div.addEventListener("click",change)
     document.getElementById('card-deck').appendChild(div);
 }
 
 let c = document.querySelectorAll(".card");
 
-for (const i of c) {
-    i.addEventListener("click",change)
-}
 
 
 function change() {
