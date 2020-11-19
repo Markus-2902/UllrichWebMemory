@@ -28,6 +28,6 @@
     background: blue;
   }
 
-  .card:active { 
-    background: aqua!important; 
+  .flipped {
+    background: yellow;
   }
