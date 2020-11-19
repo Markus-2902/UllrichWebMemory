@@ -9,8 +9,9 @@ for (let index = 0; index < 16; index++) {
     div.className = 'card';
 
     //div.innerHTML = index%2 + 1;
-    div.innerHTML = index + 1;
-    div.addEventListener("click",change)
+    //div.innerHTML = index + 1;
+    div.
+    div.addEventListener("click",change);
     document.getElementById('card-deck').appendChild(div);
 }
 
@@ -18,6 +19,16 @@ let c = document.querySelectorAll(".card");
 
 
 
-function change() {
+/**function change() {
     this.classList.toggle('flipped')
+    this.innerHTML.toggle(this.type)
+}**/
+function change(event){
+    if (!this.classList.contains('found')) {
+        openCard(this);
+    }
+}
+
+function openCard(c){
+    alert(c.innerHTML);
 }

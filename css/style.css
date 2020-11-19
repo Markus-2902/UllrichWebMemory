@@ -31,3 +31,7 @@
   .flipped {
     background: yellow;
   }
+
+  .found {
+    background: red;
+  }
