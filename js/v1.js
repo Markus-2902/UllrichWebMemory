@@ -1,8 +1,15 @@
-for (let index = 1; index < 17; index++) {
+/**let flippedCards = 0;
+
+if (flippedcard == 2) {
+    (document.getElementsByClassName("flipped")).classList.toggle("flipped");
+}**/
+
+for (let index = 0; index < 16; index++) {
     const div = document.createElement('div');
     div.className = 'card';
 
-    div.innerHTML = index;
+    //div.innerHTML = index%2 + 1;
+    div.innerHTML = index + 1;
     div.addEventListener("click",change)
     document.getElementById('card-deck').appendChild(div);
 }
