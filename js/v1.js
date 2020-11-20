@@ -10,7 +10,7 @@ for (let index = 0; index < 16; index++) {
 
     //div.innerHTML = index%2 + 1;
     //div.innerHTML = index + 1;
-    div.
+    div.innerHTML = index+1;
     div.addEventListener("click",change);
     document.getElementById('card-deck').appendChild(div);
 }
