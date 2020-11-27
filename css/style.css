@@ -22,14 +22,43 @@
     grid-row: 1;
     grid-column: 1;
 }**/
-  
-  
-.card {
+
+body{
+    background-color: grey;
+}
+
+.deck {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+
+/*.card {
     float: left;
     height: 24vw;
     margin: 1%;
     width: 23%;
     background-color: blue;
+}*/
+.card {
+    background-color: rgb(32, 32, 32);
+    width: auto;
+    height: auto;
+    margin: 2%;
+    flex: auto;
+    flex-basis: auto;
+    flex-basis: 17%;
+    color: grey;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .flipped {
@@ -40,5 +69,9 @@
 }
 
 .found {
-    background: red;
+    background: red!important;
+}
+
+.unsichtbar{
+    opacity: 0%!important;
 }
