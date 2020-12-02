@@ -5,11 +5,19 @@
     <title>Memory</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="icon" type="image/png" href="images/favicon.png"/>
-    <!--20201126-update8-->
+    <!--v2_20201202-update1-->
 </head>
 <body>
+    <div class="container">
+        <p id="demo">0</p>
+    </div>
+    <div class="container">
+        <button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
+        
+        <button onclick="stopCounter()">stop</button>
+    </div>
     <div class="container">
         <div class="deck" id="card-deck">
             <!--div class="card">
@@ -18,6 +26,6 @@
 
         </div>
     </div>
-    <script src="js/v1.js"></script>
+    <script src="js/v2.js"></script>
 </body>
 </html>

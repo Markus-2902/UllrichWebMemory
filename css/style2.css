@@ -1,0 +1,57 @@
+body{
+    background-color: grey;
+}
+
+.deck {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.flipped {
+    background-color: yellow!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.found {
+    background: red!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgb(32, 32, 32);
+    width: auto;
+    height: auto;
+    margin: 2%;
+    flex: auto;
+    flex-basis: auto;
+    flex-basis: 17%;
+    color: grey;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unsichtbar{
+    opacity: 0%!important;
+}
+
+.anzeige{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
