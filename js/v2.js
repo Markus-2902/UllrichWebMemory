@@ -75,11 +75,32 @@ function myCounter() {
         if (seconds < 60) {
             seconds = ++counter;
         }
-        else if (!(minutes < 60) && ) {
+        else if (seconds == 59) {
+            minutes = ++counter;
+            seconds = 0;
+        }
+        else if (minutes == 59 && seconds == 59) {
+            hours = ++counter;
+            minutes = 0;
+            seconds = 0;
+        }
+        else if (hours == 23 && minutes == 59 && seconds==59){
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+        }
+        /*if (seconds > 9) {
+            document.getElementById("demo").innerHTML = `${hours}:${minutes}:0${seconds}`;
+        }
+        else if (seconds > 9 &&) {
             
         }
-        document.getElementById("demo").innerHTML = ++counter;
+        else if (seconds < 9 && minutes > 9 && hours < 9) {
+            
+        }*/
+        
     }
+    document.getElementById("demo").innerHTML = `${hours}:${minutes}:${seconds}`;
 }
 
 function stopCounter(){
