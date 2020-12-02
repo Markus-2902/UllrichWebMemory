@@ -22,7 +22,8 @@ let c = document.querySelectorAll(".card");
 function flipp(event){
     openCard(this);
 }
-
+let foundCard = [];
+let score = 0;
 function openCard(c){
     if(openCards.length<2){
         c.classList.toggle('flipped');
@@ -30,9 +31,13 @@ function openCard(c){
         if (openCards.length == 2) {
             if (openCards[0].type == openCards[1].type) {
                 alert("gleich");
+                foundCard.push(openCards[0]);
+                foundCard.push(openCards[1]);
                 setTimeout(()=>{
+                    
                     openCards.pop().classList.toggle('found')
                     openCards.pop().classList.toggle('found')
+                    document.getElementById("cardscore").innerHTML = foundCard.length/2;
                 },1000);
                 
             }
@@ -45,6 +50,8 @@ function openCard(c){
             }
         }
     }
+    
+    
 }
 
 //Kartenindex Mischen
@@ -61,46 +68,37 @@ function shuffle(arra1){
     return arra1;
 }
 
+//karten
+
+
 //stopuhr
+/**
 let counterrunning = false;
 let counter = 0;
 let hours = 0;
 let minutes = 0;
 let seconds = 00;
 function myCounter() {
-    if (counterrunning == true) {
-        alert("Counter rennt schon");
+    if (hours == 23 && minutes == 59 && seconds==59){
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
     }
-    else{
-        if (seconds < 60) {
-            seconds = ++counter;
-        }
-        else if (seconds == 59) {
-            minutes = ++counter;
-            seconds = 0;
-        }
-        else if (minutes == 59 && seconds == 59) {
-            hours = ++counter;
-            minutes = 0;
-            seconds = 0;
-        }
-        else if (hours == 23 && minutes == 59 && seconds==59){
-            seconds = 0;
-            minutes = 0;
-            hours = 0;
-        }
-        /*if (seconds > 9) {
-            document.getElementById("demo").innerHTML = `${hours}:${minutes}:0${seconds}`;
-        }
-        else if (seconds > 9 &&) {
-            
-        }
-        else if (seconds < 9 && minutes > 9 && hours < 9) {
-            
-        }*/
-        
+    else if (seconds < 60) {
+        seconds = ++counter;
     }
+    if (seconds == 59) {
+        minutes = ++counter;
+        seconds = 0;
+    }
+    if (minutes == 59 && seconds == 59) {
+        hours = ++counter;
+        minutes = 0;
+        seconds = 0;
+    }
+    
     document.getElementById("demo").innerHTML = `${hours}:${minutes}:${seconds}`;
+
 }
 
 function stopCounter(){
@@ -108,7 +106,7 @@ function stopCounter(){
     document.getElementById("demo").innerHTML = 0;
     counter = 0;
     counterrunning = false;
-}
+}**/
 /*
 1) Leeres Array zum Speichern der aufgedeckten Karten
 2) Karten richtig erzeugen (type) [1,1,2,2,3,3,4,4....8,8]
