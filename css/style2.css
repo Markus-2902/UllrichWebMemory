@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: lightblue;
 }
 
 .deck {
@@ -19,31 +19,47 @@ body{
     background-color: yellow!important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .found {
-    background: red!important;
+    background: yellow!important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    opacity: 20%;
+
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .card {
-    background-color: rgb(32, 32, 32);
-    width: auto;
-    height: auto;
+    background-color:  darkblue;
+    width: 105;
+    height: 94;
     margin: 2%;
     flex: auto;
-    flex-basis: auto;
     flex-basis: 17%;
-    color: grey;
-    font-size: 150%;
+    color: turquoise;
+    font-size: 120%;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .unsichtbar{
@@ -55,3 +71,5 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+

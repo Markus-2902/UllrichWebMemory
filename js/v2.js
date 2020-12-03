@@ -12,7 +12,6 @@ for (let index = 0; index < HowMuchCards; index++) {
     const div = document.createElement('div');
     div.className = 'card';
     div.type = cardTypes[index];
-    div.innerHTML = cardTypes[index];
     div.addEventListener("click",flipp);
     document.getElementById('card-deck').appendChild(div);
 }
@@ -27,25 +26,28 @@ let score = 0;
 function openCard(c){
     if(openCards.length<2){
         c.classList.toggle('flipped');
+        c.innerHTML = c.type;
         openCards.push(c);
         if (openCards.length == 2) {
             if (openCards[0].type == openCards[1].type) {
-                alert("gleich");
+                //alert("gleich");
                 foundCard.push(openCards[0]);
                 foundCard.push(openCards[1]);
                 setTimeout(()=>{
                     
                     openCards.pop().classList.toggle('found')
                     openCards.pop().classList.toggle('found')
-                    document.getElementById("cardscore").innerHTML = foundCard.length/2;
+                    document.getElementById("cardscore").innerHTML = `Score: ${foundCard.length/2}`;
                 },1000);
                 
             }
             else{
-                alert("nicht gleich")
+                //alert("nicht gleich")
                 setTimeout(()=>{
-                    openCards.pop().classList.toggle('flipped')
-                    openCards.pop().classList.toggle('flipped')
+                    openCards[0].innerHTML= "";
+                    openCards[1].innerHTML= "";
+                    openCards.pop().classList.toggle('flipped');
+                    openCards.pop().classList.toggle('flipped');
                 },1000);
             }
         }
