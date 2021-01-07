@@ -9,10 +9,10 @@ for (let index = 0; index < HowMuchCards/2; index++) {
 cardTypes = shuffle(cardTypes);
 
 for (let index = 0; index < HowMuchCards; index++) {
-    const div = document.createElement('div');
-    div.className = 'card';
-    div.type = cardTypes[index];
-    div.addEventListener("click",flipp);
+    const div1 = document.createElement('div');
+    div1.className = 'card';
+    div1.type = cardTypes[index];
+    div1.addEventListener("click",flipp);
     document.getElementById('card-deck').appendChild(div);
 }
 let c = document.querySelectorAll(".card");
